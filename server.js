@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 var argv = require('optimist').argv;
 
   //Connect to Mongodb
-  mongoose.connect('mongodb://'+argv.be_ip+':80/my_database');
+  mongoose.connect('mongodb://'+argv.be_ip+':80/pass_db');
 
   //set express to app
   var app = express();
