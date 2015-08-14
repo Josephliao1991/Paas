@@ -25,6 +25,7 @@ var argv = require('optimist').argv;
     var params = []
     params = request.query.params
     console.log("ParamS : "+params);
+    console.log("ParamS[0] :"+params[0]);
     response.json({result:params})
   })
 
