@@ -20,6 +20,12 @@ var argv = require('optimist').argv;
     response.end("Hello world, This is Pass Test Server!");
   });
 
+  app.get('/create', function (request, response) {
+    // body...
+    var params = request.query.params
+    console.log("ParamS : "+params);
+  })
+
   app.listen(8080,argv.fe_ip,function(request, response) {
   // app.listen(80,argv.fe_ip,function(request, response) {
     // body...
