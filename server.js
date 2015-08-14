@@ -22,7 +22,7 @@ var argv = require('optimist').argv;
 
   app.get('/create', function (request, response) {
     // body...
-    var params = request.params.query.*
+    var params = request.query.*
     // params = request.query.params
     console.log("ParamS : "+params);
     // console.log("ParamS[0] :"+params[0]);
