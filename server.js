@@ -21,7 +21,7 @@ app.use(bodyparser.urlencoded({
         req.rawBody = buf;
     }
 }));
-  // app.use(bodyparser.raw)
+  app.use(bodyparser.raw)
   // app.use(bodyparser.json())
   // app.use(bodyparser.urlencoded({extended: false}))
   app.use(bodyparser.json({ type: 'application/vnd.api+json' }))
@@ -38,8 +38,8 @@ app.use(bodyparser.urlencoded({
     console.log("Key : "+key);
     var value = request.query.value
     console.log("Value : "+value);
-    var rowBody = request.rawBody
-    console.log("rowBody : "+rowBody);
+    var rawBody = request.rawBody
+    console.log("rawBody : "+rawBody);
     // console.log("ParamS[0] :"+params[0]);
 
   })
