@@ -10,6 +10,7 @@ var argv = require('optimist').argv;
 
   //set express to app
   var app = express();
+  app.use(bodyParser.raw)
   app.use(bodyparser.json())
   app.use(bodyparser.urlencoded({extended: false}))
   app.use(bodyparser.json({ type: 'application/vnd.api+json' }))
