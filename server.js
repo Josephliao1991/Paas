@@ -41,7 +41,7 @@ app.use(bodyparser.urlencoded({
     var rowBody = request.rawBody
     console.log("rowBody : "+rowBody);
     // console.log("ParamS[0] :"+params[0]);
-    response.json({result:params})
+
   })
 
   app.listen(8080,argv.fe_ip,function(request, response) {
