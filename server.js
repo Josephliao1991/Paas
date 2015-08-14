@@ -24,6 +24,7 @@ var argv = require('optimist').argv;
     // body...
     var params = request.query.params
     console.log("ParamS : "+params);
+    response.json({result:params})
   })
 
   app.listen(8080,argv.fe_ip,function(request, response) {
