@@ -22,8 +22,8 @@ var argv = require('optimist').argv;
 
   app.get('/create', function (request, response) {
     // body...
-    var params = []
-    params = request.query.params
+    var params = request.params
+    // params = request.query.params
     console.log("ParamS : "+params);
     console.log("ParamS[0] :"+params[0]);
     response.json({result:params})
