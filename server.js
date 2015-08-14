@@ -24,7 +24,11 @@ var argv = require('optimist').argv;
     // body...
     // var params = request.query.a*
     var params = request.query.params
+    var key = request.query.key
+    var value = request.query.value
     console.log("ParamS : "+params);
+    console.log("Key : "+Key);
+    console.log("Value : "+Value);
     // console.log("ParamS[0] :"+params[0]);
     response.json({result:params})
   })
