@@ -10,20 +10,9 @@ var argv = require('optimist').argv;
 
   //set express to app
   var app = express();
-  app.use(bodyparser.json({
-    verify: function (req, res, buf, encoding) {
-        req.rawBody = buf;
-    }
-}));
-app.use(bodyparser.urlencoded({
-    extended: false,
-    verify: function (req, res, buf, encoding) {
-        req.rawBody = buf;
-    }
-}));
-  app.use(bodyparser.raw)
-  // app.use(bodyparser.json())
-  // app.use(bodyparser.urlencoded({extended: false}))
+
+  app.use(bodyparser.json())
+  app.use(bodyparser.urlencoded({extended: false}))
   app.use(bodyparser.json({ type: 'application/vnd.api+json' }))
   app.use(methodOverride())
 
